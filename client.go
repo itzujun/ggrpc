@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	pb "github.com/itzujun/ggrpc/consul"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log"
 )
@@ -9,8 +11,6 @@ import (
 const (
 	add = "localhost:50051"
 )
-
-
 
 func main() {
 
@@ -22,11 +22,14 @@ func main() {
 	defer conn.Close()
 	c := pb.NewHelloServiceClient(conn)
 
-	name := "北京刘祖军"
+	name := "北京Jack"
 	r, err := c.SayHello(context.Background(), &pb.HelloRequest{Greeting: name})
 	if err != nil {
 		fmt.Printf("could not greet: %v", err)
 	}
 	fmt.Printf("返回结果: %s", r.Reply)
-}
+	fmt.Println("")
+	resp, err := c.Add(context.Background(), &pb.IntTrans{Input1: 11, Input2: 22})
+	fmt.Println("计算结果:", resp.IntRes)
 
+}

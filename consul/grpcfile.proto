@@ -11,7 +11,17 @@ message HelloResponse {
   repeated int32 number=4;
 }
 
+message IntTrans {
+     int64 Input1 = 1;
+     int64 Input2 = 2;
+}
+
+message ResRes{
+    int64 IntRes = 1;
+}
+
 service HelloService {
   rpc SayHello(HelloRequest) returns (HelloResponse){}
+  rpc Add(IntTrans) returns (ResRes){}
 }
 
