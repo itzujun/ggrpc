@@ -3,7 +3,7 @@
 
 ```
 项目结构
-├──consul|    #接口定义文件
+├──consul| #接口定义文件
          | grpcfile.pb.go # 命令生成接口文件
          | grpcfile.proto # 接口自定义文件
 ├── client.go  # grpc客户端
