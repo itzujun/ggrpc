@@ -25,10 +25,11 @@
 2. 启动客户端  client.go
 
 ```
+#### server运行
+![image](https://github.com/itzujun/ggrpc/blob/master/image/server.jpg)
 
-![image](https://github.com/itzujun/lagou/blob/master/bmp/show-1.jpg)
-![image](https://github.com/itzujun/lagou/blob/master/bmp/show-1.jpg)
-
+#### client运行
+![image](https://github.com/itzujun/ggrpc/blob/master/image/client.jpg)
 
 
 
