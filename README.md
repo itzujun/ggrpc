@@ -18,6 +18,20 @@
 4. 建立服务端server.go
 6. 建立客户端client.go
 
+
+### 启动方法
+```$xslt
+1. 启动服务    server.go
+2. 启动客户端  client.go
+
+```
+
+![image](https://github.com/itzujun/lagou/blob/master/bmp/show-1.jpg)
+![image](https://github.com/itzujun/lagou/blob/master/bmp/show-1.jpg)
+
+
+
+
 ```
 end...
 ```
