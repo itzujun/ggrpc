@@ -32,4 +32,11 @@ func main() {
 	resp, err := c.Add(context.Background(), &pb.IntTrans{Input1: 11, Input2: 22})
 	fmt.Println("计算结果:", resp.IntRes)
 
+	loc, err := c.DeviceLocation(context.Background(), &pb.LocationRes{Src: "成都"})
+	if err != nil {
+		fmt.Println("it is error: ", err.Error())
+		return
+	}
+	fmt.Println("计算结果为: ",loc.Replay)
+
 }
